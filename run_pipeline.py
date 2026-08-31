@@ -3,7 +3,6 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 
 from src.backtesting import christoffersen_test, conditional_coverage, kupiec_test, rolling_historical_var
@@ -17,7 +16,7 @@ from src.stress import empirical_tail_events, historical_window_stress, hypothet
 from src.volatility import ewma_covariance
 
 ROOT = Path(__file__).resolve().parent
-CACHE = ROOT / "data" / "processed" / "market_factors_2018_2025.csv"
+CACHE = ROOT / "data" / "processed" / "market_factors_2019_2025.csv"
 OUTPUTS = ROOT / "outputs"
 REPORTS = ROOT / "reports" / "generated"
 
@@ -50,10 +49,10 @@ def main() -> None:
             "end": str(factors.index.max().date()),
             "factor_rows": int(len(factors)),
             "pnl_rows": int(len(pnl)),
-            "source": "Federal Reserve Bank of St. Louis FRED public CSV series",
+            "source": "Pratheek Nagaraj Financial Markets public GitHub dataset (MIT); OHLC histories described by source as best-effort cross-referenced to primary sources",
         },
         "methodology_flags": {
-            "market_moves": "empirical public FRED observations",
+            "market_moves": "empirical public historical observations from third-party GitHub dataset; not an official feed",
             "positions_and_dv01": "illustrative",
             "internal_limits": "illustrative",
             "hypothetical_stresses": "illustrative",
