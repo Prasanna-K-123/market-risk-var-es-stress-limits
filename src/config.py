@@ -17,7 +17,7 @@ DATA_URLS = {
     "dow": "https://raw.githubusercontent.com/pratheeknagaraj/financial-markets/main/data/us/stock/dow/dow.csv",
     "eurusd": "https://raw.githubusercontent.com/pratheeknagaraj/financial-markets/main/data/global/currency/fiat/eurusd/eurusd.csv",
     "gbpusd": "https://raw.githubusercontent.com/pratheeknagaraj/financial-markets/main/data/global/currency/fiat/gbpusd/gbpusd.csv",
-    "wti": "https://raw.githubusercontent.com/pratheeknagaraj/financial-markets/main/data/us/commodity/energy/crude_oil/crude_oil.csv",
+    "gold": "https://raw.githubusercontent.com/pratheeknagaraj/financial-markets/main/data/us/commodity/metals/gold/gold.csv",
     "ust10y": "https://raw.githubusercontent.com/pratheeknagaraj/financial-markets/main/data/us/treasury/tyield_10/tyield_10.csv",
 }
 
@@ -26,7 +26,7 @@ NOTIONALS = {
     "dow": 35_000_000.0,
     "eurusd": 20_000_000.0,
     "gbpusd": 10_000_000.0,
-    "wti": 15_000_000.0,
+    "gold": 15_000_000.0,
 }
 UST10Y_DV01 = 25_000.0  # USD loss for a +1 bp 10Y yield move.
 PORTFOLIO_GROSS = sum(abs(x) for x in NOTIONALS.values()) + 25_000_000.0
