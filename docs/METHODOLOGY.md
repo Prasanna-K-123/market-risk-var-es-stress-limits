@@ -2,11 +2,11 @@
 
 ## Risk-factor data
 
-The empirical risk-factor history is downloaded from the Federal Reserve Bank of St. Louis FRED public CSV interface for a fixed 2018–2025 window: S&P 500 (`SP500`), USD/EUR exchange rate (`DEXUSEU`), Brent crude oil (`DCOILBRENTEU`), broad trade-weighted U.S. dollar index (`DTWEXBGS`) and 10-year Treasury yield (`DGS10`). The S&P 500 calendar anchors the alignment; other factors are forward-filled only across short publication/holiday gaps.
+The empirical risk-factor history uses a fixed 2019–2025 window of public daily OHLC histories from the MIT-licensed `pratheeknagaraj/financial-markets` GitHub repository: Nasdaq Composite, EUR/USD, GBP/USD, Brent crude oil and the 10-year Treasury yield. The source repository describes the data as dynamically updated, publicly available and best-effort cross-referenced to primary sources; it is not treated here as an official market-data feed. Adjusted close (or close if unavailable) is used. The Nasdaq calendar anchors alignment and other factors are forward-filled only across short trading/publication gaps.
 
 ## P&L mapping
 
-Equity, FX, commodity and dollar-index factors use simple percentage changes times illustrative USD notionals. The 10-year Treasury factor uses daily yield changes in basis points times an illustrative USD DV01. This produces daily factor P&L contributions and a total portfolio P&L series.
+Equity, FX and commodity factors use simple percentage changes times illustrative USD notionals. The 10-year Treasury factor uses daily yield changes in basis points times an illustrative USD DV01. This produces daily factor P&L contributions and a total portfolio P&L series.
 
 ## VaR and Expected Shortfall
 
@@ -18,4 +18,4 @@ A 250-observation rolling Historical VaR is shifted by one day before comparison
 
 ## Decomposition, stress and limits
 
-Normal-theory component VaR attributes portfolio risk to factor P&L contributions. Historical-window stresses replay observed factor moves over named market episodes. Hypothetical shocks, positions and internal limits are transparent illustrative assumptions. Limit monitoring flags risk metrics that exceed those assumptions.
+Normal-theory component VaR attributes portfolio risk to factor P&L contributions. Historical-window stresses replay observed factor moves over named episodes. Hypothetical shocks, positions and internal limits are transparent illustrative assumptions. Limit monitoring flags metrics that exceed those assumptions.
