@@ -5,12 +5,12 @@ import pandas as pd
 
 from src.config import NOTIONALS, UST10Y_DV01
 
-FACTOR_COLUMNS = ["sp500", "eurusd", "brent", "usd_broad", "ust10y"]
+FACTOR_COLUMNS = ["nasdaq", "eurusd", "gbpusd", "brent", "ust10y"]
 
 
 def factor_changes(factors: pd.DataFrame) -> pd.DataFrame:
     changes = pd.DataFrame(index=factors.index)
-    for factor in ["sp500", "eurusd", "brent", "usd_broad"]:
+    for factor in ["nasdaq", "eurusd", "gbpusd", "brent"]:
         changes[factor] = factors[factor].pct_change(fill_method=None)
     changes["ust10y"] = factors["ust10y"].diff() * 100.0  # percentage points -> bp
     return changes.dropna()
