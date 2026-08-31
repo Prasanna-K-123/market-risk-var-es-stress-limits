@@ -6,8 +6,8 @@ from src.volatility import ewma_covariance
 
 
 def test_rate_dv01_sign_and_total_pnl():
-    idx = pd.date_range("2025-01-01", periods=3)
-    f = pd.DataFrame({"nasdaq":[100,101,101],"eurusd":[1,1,1],"gbpusd":[1.25,1.25,1.25],"brent":[70,70,70],"ust10y":[4.0,4.1,4.0]}, index=idx)
+    idx = pd.date_range("2020-01-01", periods=3)
+    f = pd.DataFrame({"dow":[100,101,101],"eurusd":[1,1,1],"gbpusd":[1.25,1.25,1.25],"wti":[70,70,70],"ust10y":[4.0,4.1,4.0]}, index=idx)
     p = factor_pnl(factor_changes(f))
     assert p.iloc[0]["ust10y"] < 0
     assert np.allclose(p["total_pnl"], p.drop(columns="total_pnl").sum(axis=1))
