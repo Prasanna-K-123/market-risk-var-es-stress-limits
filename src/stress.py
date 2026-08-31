@@ -5,16 +5,16 @@ import pandas as pd
 from src.config import NOTIONALS, UST10Y_DV01
 
 HYPOTHETICAL = {
-    "equity_rates_selloff": {"sp500": -0.15, "eurusd": -0.05, "brent": -0.12, "usd_broad": 0.05, "ust10y_bp": 75.0},
-    "global_recession": {"sp500": -0.20, "eurusd": -0.03, "brent": -0.25, "usd_broad": 0.04, "ust10y_bp": -80.0},
-    "inflation_energy_shock": {"sp500": -0.10, "eurusd": -0.04, "brent": 0.30, "usd_broad": 0.05, "ust10y_bp": 120.0},
-    "usd_depreciation": {"sp500": 0.03, "eurusd": 0.10, "brent": 0.08, "usd_broad": -0.08, "ust10y_bp": 20.0},
+    "equity_rates_selloff": {"nasdaq": -0.18, "eurusd": -0.05, "gbpusd": -0.06, "brent": -0.12, "ust10y_bp": 75.0},
+    "global_recession": {"nasdaq": -0.25, "eurusd": -0.03, "gbpusd": -0.04, "brent": -0.25, "ust10y_bp": -80.0},
+    "inflation_energy_shock": {"nasdaq": -0.12, "eurusd": -0.04, "gbpusd": -0.05, "brent": 0.30, "ust10y_bp": 120.0},
+    "usd_depreciation": {"nasdaq": 0.03, "eurusd": 0.10, "gbpusd": 0.08, "brent": 0.08, "ust10y_bp": 20.0},
 }
 
 HISTORICAL_WINDOWS = {
     "covid_selloff": ("2020-02-19", "2020-03-23"),
-    "2022_rates_energy": ("2022-01-03", "2022-06-16"),
-    "2018_q4_riskoff": ("2018-10-01", "2018-12-24"),
+    "2022_inflation_rates": ("2022-01-03", "2022-06-16"),
+    "2023_bank_stress": ("2023-03-01", "2023-03-24"),
 }
 
 
