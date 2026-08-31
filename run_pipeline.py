@@ -16,7 +16,7 @@ from src.stress import empirical_tail_events, historical_window_stress, hypothet
 from src.volatility import ewma_covariance
 
 ROOT = Path(__file__).resolve().parent
-CACHE = ROOT / "data" / "processed" / "market_factors_2019_2025.csv"
+CACHE = ROOT / "data" / "processed" / "market_factors_2016_2021.csv"
 OUTPUTS = ROOT / "outputs"
 REPORTS = ROOT / "reports" / "generated"
 
