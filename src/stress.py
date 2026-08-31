@@ -5,16 +5,17 @@ import pandas as pd
 from src.config import NOTIONALS, UST10Y_DV01
 
 HYPOTHETICAL = {
-    "equity_rates_selloff": {"nasdaq": -0.18, "eurusd": -0.05, "gbpusd": -0.06, "brent": -0.12, "ust10y_bp": 75.0},
-    "global_recession": {"nasdaq": -0.25, "eurusd": -0.03, "gbpusd": -0.04, "brent": -0.25, "ust10y_bp": -80.0},
-    "inflation_energy_shock": {"nasdaq": -0.12, "eurusd": -0.04, "gbpusd": -0.05, "brent": 0.30, "ust10y_bp": 120.0},
-    "usd_depreciation": {"nasdaq": 0.03, "eurusd": 0.10, "gbpusd": 0.08, "brent": 0.08, "ust10y_bp": 20.0},
+    "equity_rates_selloff": {"dow": -0.15, "eurusd": -0.05, "gbpusd": -0.06, "wti": -0.12, "ust10y_bp": 75.0},
+    "global_recession": {"dow": -0.20, "eurusd": -0.03, "gbpusd": -0.04, "wti": -0.25, "ust10y_bp": -80.0},
+    "inflation_energy_shock": {"dow": -0.10, "eurusd": -0.04, "gbpusd": -0.05, "wti": 0.30, "ust10y_bp": 120.0},
+    "usd_depreciation": {"dow": 0.03, "eurusd": 0.10, "gbpusd": 0.08, "wti": 0.08, "ust10y_bp": 20.0},
 }
 
 HISTORICAL_WINDOWS = {
+    "brexit_repricing": ("2016-06-23", "2016-06-27"),
+    "volmageddon_2018": ("2018-02-01", "2018-02-09"),
     "covid_selloff": ("2020-02-19", "2020-03-23"),
-    "2022_inflation_rates": ("2022-01-03", "2022-06-16"),
-    "2023_bank_stress": ("2023-03-01", "2023-03-24"),
+    "pandemic_reflation": ("2020-11-02", "2021-03-31"),
 }
 
 
