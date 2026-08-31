@@ -1,0 +1,6 @@
+factor,sensitivity_type,sensitivity
+dow,notional,35000000.0
+eurusd,notional,20000000.0
+gbpusd,notional,10000000.0
+gold,notional,15000000.0
+ust10y,DV01_USD_per_bp,25000.0

@@ -1,0 +1,86 @@
+{
+  "backtesting": {
+    "christoffersen": {
+      "lr_ind": 10.035877506989692,
+      "n00": 1058,
+      "n01": 14,
+      "n10": 14,
+      "n11": 3,
+      "p_value": 0.0015352039551102426
+    },
+    "conditional_coverage": {
+      "lr_cc": 12.981743969036359,
+      "p_value": 0.0015172254339946686
+    },
+    "kupiec": {
+      "exception_rate": 0.015596330275229359,
+      "exceptions": 17,
+      "lr_uc": 2.9458664620466664,
+      "observations": 1090,
+      "p_value": 0.08609751504687035
+    }
+  },
+  "data": {
+    "end": "2021-04-30",
+    "factor_rows": 1341,
+    "pnl_rows": 1340,
+    "source": "Pratheek Nagaraj Financial Markets public GitHub dataset (MIT); OHLC histories described by source as best-effort cross-referenced to primary sources",
+    "start": "2016-01-04"
+  },
+  "historical": {
+    "es": 2225680.883604654,
+    "var": 1285499.4775613653
+  },
+  "limits": {
+    "historical_es": {
+      "breach": false,
+      "limit": 3000000.0,
+      "value": 2225680.883604654
+    },
+    "historical_var": {
+      "breach": false,
+      "limit": 2000000.0,
+      "value": 1285499.4775613653
+    },
+    "largest_notional_share": {
+      "breach": true,
+      "limit": 0.4,
+      "value": 0.4375
+    },
+    "monte_carlo_var": {
+      "breach": false,
+      "limit": 2250000.0,
+      "value": 688392.2181679086
+    },
+    "worst_hypothetical_stress": {
+      "breach": false,
+      "limit": 10000000.0,
+      "value": 7525000.0
+    }
+  },
+  "methodology_flags": {
+    "hypothetical_stresses": "illustrative",
+    "internal_limits": "illustrative",
+    "market_moves": "empirical public historical observations from third-party GitHub dataset; not an official feed",
+    "positions_and_dv01": "illustrative",
+    "valuation": "linear factor-sensitivity P&L; not full revaluation"
+  },
+  "monte_carlo": {
+    "es": 794241.8703915426,
+    "simulations": 100000,
+    "var": 688392.2181679086
+  },
+  "parametric": {
+    "es": 1233262.845529066,
+    "mean_pnl": 29533.979120636435,
+    "sigma_pnl": 473806.87638904207,
+    "var": 1072705.6404729432
+  },
+  "tail_events": {
+    "worst_1d_date": "2020-03-16",
+    "worst_1d_pnl": -4450590.5044074515,
+    "worst_5d_end_date": "2020-03-18",
+    "worst_5d_pnl": -8947946.647317978
+  },
+  "worst_hypothetical_loss": 7525000.0
+}

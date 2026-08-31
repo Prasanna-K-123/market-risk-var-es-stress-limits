@@ -1,0 +1,6 @@
+metric,value,limit,breach
+historical_var,1285499.4775613653,2000000.0,False
+historical_es,2225680.883604654,3000000.0,False
+monte_carlo_var,688392.2181679086,2250000.0,False
+worst_hypothetical_stress,7525000.0,10000000.0,False
+largest_notional_share,0.4375,0.4,True
