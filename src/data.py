@@ -12,7 +12,7 @@ from src.config import DATA_URLS, END_DATE, START_DATE
 
 def _download_series(url: str, name: str, start: str = START_DATE, end: str = END_DATE) -> pd.Series:
     """Download one OHLC history and return adjusted-close observations."""
-    headers = {"User-Agent": "market-risk-research-project/2.0"}
+    headers = {"User-Agent": "market-risk-research-project/2.1"}
     last_error = None
     for attempt in range(3):
         try:
@@ -43,7 +43,7 @@ def load_market_factors(cache_path: Path | None = None, force_download: bool = F
         return cached.sort_index()
 
     raw = {name: _download_series(url, name) for name, url in DATA_URLS.items()}
-    anchor = raw["nasdaq"].index
+    anchor = raw["dow"].index
     factors = pd.DataFrame(index=anchor)
     for name, series in raw.items():
         factors[name] = series.reindex(anchor).ffill(limit=5)
@@ -62,7 +62,7 @@ def validate_market_factors(df: pd.DataFrame) -> None:
     if missing:
         raise ValueError(f"Missing market factors: {sorted(missing)}")
     if len(df) < 1000:
-        raise ValueError("Insufficient daily history for robust backtesting")
+        raise ValueError("Insufficient daily history for robust 250-day backtesting")
     if not df.index.is_monotonic_increasing or df.index.has_duplicates:
         raise ValueError("Dates must be unique and increasing")
     if df[list(required)].isna().any().any():
